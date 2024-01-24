@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Login - Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Manager<span>Bem-vindo de volta!</span></h1>
+        </header>
+        <section class="registration">
+            <form>
+                <div class="input-group">
+                    <input type="text" id="username" name="username" placeholder="&#xf007; Nome">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="&#xf023; Senha">
+                </div>
+                <button type="button" onclick="login()">Entrar</button>
+            </form>
+        </section>
+        <button class="create-account" onclick="goToCadastro()">Não possui uma conta? Faça cadastro</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const createAccountBtn = document.querySelector('.create-account');
+
+            createAccountBtn.addEventListener('click', function() {
+                goToCadastro();
+            });
+        });
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Adicione aqui a lógica para autenticação no servidor
+            console.log('Nome de usuário:', username);
+            console.log('Senha:', password);
+            
+            // Redirecionar para a página principal após o login (substitua 'index.html' pelo caminho real)
+            window.location.href = 'index.html';
+        }
+
+        function goToCadastro() {
+            // Redirecionar para a página de cadastro (substitua 'cadastro.html' pelo caminho real)
+            window.location.href = 'cadastro.html';
+        }
+    </script>
+</body>
+</html>

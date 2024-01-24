@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Cadastro - Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap">
+</head>
+<body>
+    <div class="container2">
+        <header>
+            <h1>Cadastre-se aqui!<span></span></h1>
+        </header>
+        <section class="registration2">
+            <div class="left-section2">
+                <form onsubmit="event.preventDefault(); cadastrar();">
+                    <div class="input-group2">
+                        <input type="text" id="username" name="username" placeholder="Seu nome" required>
+                    </div>
+                    <div class="input-group2">
+                        <input type="password" id="password" name="password" placeholder="Sua senha" required>
+                    </div>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+            <div class="right-section2"></div>
+        </section>
+        <button class="create-account2" onclick="goToLogin()">Já possui uma conta? Faça login</button>
+    </div>
+
+    <script>
+        
+        const usuariosCadastrados = [];
+
+        function cadastrar() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username.trim() === '' || password.trim() === '') {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+
+            if (usuariosCadastrados.includes(username)) {
+                alert('Nome de usuário já cadastrado. Escolha outro.');
+                return;
+            }
+
+            usuariosCadastrados.push(username);
+
+            console.log('Nome de usuário:', username);
+            console.log('Senha:', password);
+            console.log('Usuários cadastrados:', usuariosCadastrados);
+
+            alert('Cadastro realizado com sucesso!');
+            window.location.href = 'login.html';
+        }
+
+        function goToLogin() {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

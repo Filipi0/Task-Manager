@@ -181,8 +181,8 @@ body.container-main3 {
 }
 
 section {
-    background-color: #6A5ACD; /* Corrigido para o roxo original */
-    color: white; /* Adicionado para tornar o texto branco */
+    background-color: #6A5ACD; 
+    color: white; 
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 40px;
@@ -193,11 +193,11 @@ section {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    border: 4px solid white; /* Corrigido para a cor branca */
+    border: 4px solid white; 
     border-radius: 4px;
     margin-top: 35px;
     margin-bottom: 40px;
-    color: #6A5ACD; /* Adicionado para manter o texto roxo */
+    color: #6A5ACD; 
 }
 
 button {

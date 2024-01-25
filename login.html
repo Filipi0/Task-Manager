@@ -31,27 +31,23 @@
         const usuariosCadastrados = []; // Certifique-se de que esteja declarado no início do script
 
         function login(event) {
-            event.preventDefault(); // Impede o envio do formulário
+    event.preventDefault();
 
-            const username = document.getElementById('username').value.trim();
-            const password = document.getElementById('password').value.trim();
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
 
-            console.log('Usuários cadastrados:', usuariosCadastrados);
+    const storedUsers = JSON.parse(localStorage.getItem('usuariosCadastrados')) || [];
 
-            const usuario = usuariosCadastrados.find(user => user.username === username && user.password === password);
+    const usuario = storedUsers.find(user => user.username === username && user.password === password);
 
-            console.log('Usuário encontrado:', usuario);
+    if (usuario) {
+        alert('Login bem-sucedido!');
+        window.location.href = 'index.html';
+    } else {
+        alert('Nome de usuário ou senha inválidos');
+    }
+}
 
-            if (usuario) {
-                console.log('Login bem-sucedido!');
-                alert('Login bem-sucedido!');
-                window.location.href = 'index.html'; // Redireciona para a página principal se o login for bem-sucedido
-                return false; // Adicione essa linha para evitar que o formulário seja enviado
-            } else {
-                console.log('Nome de usuário ou senha inválidos');
-                alert('Nome de usuário ou senha inválidos');
-            }
-        }
 
         function goToCadastro() {
             window.location.href = 'cadastro.html';

@@ -28,11 +28,12 @@
             <form id="markAsDoneForm">
                 <div class="input-group3">
                     <label for="task-index3">Índice da Tarefa:</label>
-                    <input type="number" id="task-index3" name="task-index3" placeholder="Informe o índice da tarefa" required>
+                    <input type="number" id="task-index3" name="task-index3" placeholder="Informe o índice da tarefa" min="1" required>
                 </div>
                 <button type="button" onclick="markAsDone()">Confirmar</button>
             </form>
         </section>
+        
 
         <section class="task-list3">
             <div class="task-details3">
@@ -69,8 +70,10 @@ function addTask() {
 
 function markAsDone() {
     const index = document.getElementById('task-index3').value;
-    if (index >= 0 && index < tasks.length) {
-        tasks[index].status = 'concluido';
+    const adjustedIndex = index - 1; // Ajusta o índice inserido pelo usuário para corresponder ao índice no array
+
+    if (adjustedIndex >= 0 && adjustedIndex < tasks.length) {
+        tasks[adjustedIndex].status = 'concluido';
         updateTaskList();
         document.getElementById('markAsDoneForm').reset();
 

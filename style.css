@@ -230,3 +230,15 @@ button:hover {
     border-radius: 4px;
     margin-left: 10px; 
 }
+
+.add-task3 h2 {
+    font-size: 30px; 
+}
+
+.mark-as-done3 h2 {
+    font-size: 30px; 
+}
+
+.task-details3 h2 {
+    font-size: 30px;
+}

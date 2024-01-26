@@ -97,6 +97,7 @@ button:hover {
     cursor: pointer;
 }
 
+
 /* Estilos para a tela de cadastro */
 
 body .container2 {
@@ -128,6 +129,22 @@ body .container2 {
     margin-top: 50px;
 }
 
+
+.submit-button {
+    background-color: transparent;
+    color: white;
+    padding: 20px 20px;
+    border: 3.3px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.4em;
+}
+
+
+.submit-button:hover {
+    background-color: #ffffff;
+    color: #6A5ACD; 
+}
 
 .input-group2 {
     margin-bottom: 50px;

@@ -1,2 +1,2 @@
 # Task-Manager
-Um gerenciador de tarefas local .
+Um gerenciador de tarefas localhost.

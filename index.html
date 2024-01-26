@@ -70,7 +70,7 @@ function addTask() {
 
 function markAsDone() {
     const index = document.getElementById('task-index3').value;
-    const adjustedIndex = index - 1; // Ajusta o índice inserido pelo usuário para corresponder ao índice no array
+    const adjustedIndex = index - 1;
 
     if (adjustedIndex >= 0 && adjustedIndex < tasks.length) {
         tasks[adjustedIndex].status = 'concluido';

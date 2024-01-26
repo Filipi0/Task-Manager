@@ -1,3 +1,5 @@
+
+/* Estilo para tela de login */
 body {
     margin: 0;
     padding: 0;
@@ -71,6 +73,12 @@ button {
     border-radius: 30px;
     cursor: auto;
     font-size: 1.4em;
+}
+
+#loginForm button {
+    border-radius: 30px !important;
+    border: 3.3px solid white !important;
+    width: 140px;
 }
 
 button:hover {
